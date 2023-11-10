@@ -7,8 +7,11 @@ import DashboardLayout from '@/layouts/DashboardLayout.vue'
   <DashboardLayout
     :breadcrumb="[
       {
-        name: 'Home',
-        route: '/'
+        name: 'Components'
+      },
+      {
+        name: 'Buttons',
+        route: '/components/buttons'
       }
     ]"
   >

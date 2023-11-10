@@ -20,7 +20,17 @@ const menus: Ref<Array<Menu>> = ref([
   },
   {
     name: 'Components',
-    route: '/components'
+    children: [
+      {
+        name: 'Buttons',
+        route: '/components/buttons'
+      },
+      {
+        name: 'Form',
+        route: '/components/form'
+      }
+    ],
+    expanded: false
   },
   {
     name: 'Dropdown',
@@ -81,9 +91,14 @@ const menus: Ref<Array<Menu>> = ref([
               v-if="menu.children?.length && menu.expanded"
               class="mx-6 border-r border-b border-l flex flex-col"
             >
-              <RouterLink to="/components" class="px-6 py-4 hover:bg-gray-100"> Item 1 </RouterLink>
-              <RouterLink to="/components" class="px-6 py-4 hover:bg-gray-100"> Item 2 </RouterLink>
-              <RouterLink to="/components" class="px-6 py-4 hover:bg-gray-100"> Item 3 </RouterLink>
+              <RouterLink
+                v-for="(childMenu, index2) in menu.children"
+                :key="index2"
+                :to="childMenu.route || '/'"
+                class="px-6 py-4 hover:bg-gray-100"
+              >
+                {{ childMenu.name }}
+              </RouterLink>
             </div>
           </Transition>
         </div>
