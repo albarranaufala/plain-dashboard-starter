@@ -3,5 +3,5 @@ import { RouterView } from 'vue-router'
 </script>
 
 <template>
-  <RouterView />
+  <RouterView class="antialiased text-gray-800" />
 </template>
