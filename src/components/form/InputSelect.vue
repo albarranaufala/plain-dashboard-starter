@@ -1,7 +1,7 @@
 <script setup lang="ts">
 defineProps<{
   placeholder?: string
-  error?: string | null
+  error?: boolean
 }>()
 </script>
 
@@ -17,7 +17,6 @@ defineProps<{
     <option v-if="placeholder" selected disabled>{{ placeholder }}</option>
     <slot />
   </select>
-  <span v-if="error" class="text-xs text-red-500">{{ error }}</span>
 </template>
 
 <script lang="ts">

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 defineProps<{
-  error?: string | null
+  error?: boolean
 }>()
 </script>
 
@@ -13,7 +13,6 @@ defineProps<{
       'border-red-500': error
     }"
   />
-  <span v-if="error" class="text-xs text-red-500">{{ error }}</span>
 </template>
 
 <script lang="ts">
