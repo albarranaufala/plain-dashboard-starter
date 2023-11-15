@@ -13,6 +13,11 @@ const router = createRouter({
       path: '/components/buttons',
       name: 'components.buttons',
       component: () => import('../views/components/ButtonsView.vue')
+    },
+    {
+      path: '/components/form',
+      name: 'components.form',
+      component: () => import('../views/components/FormView.vue')
     }
   ]
 })
