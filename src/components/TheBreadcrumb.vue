@@ -11,8 +11,8 @@ defineProps<{
   <div class="flex px-3 py-1.5 rounded-full bg-gray-100 text-sm">
     <template v-for="(breadcrumbItem, index) in data" :key="index">
       <component
-        :is="breadcrumbItem.route ? RouterLink : 'span'"
-        :to="breadcrumbItem.route"
+        :is="breadcrumbItem.path ? RouterLink : 'span'"
+        :to="breadcrumbItem.path"
         class="last:font-semibold"
       >
         {{ breadcrumbItem.name }}

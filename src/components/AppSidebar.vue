@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { ref, type Ref } from 'vue'
-import { RouterLink, type RouteLocationRaw } from 'vue-router'
+import { RouterLink, useRoute } from 'vue-router'
 
 interface Menu {
   name: string
-  route?: RouteLocationRaw
+  path?: string
   exactActive?: boolean
   children?: Array<Menu>
   expanded?: boolean
@@ -13,9 +13,7 @@ interface Menu {
 const menus: Ref<Array<Menu>> = ref([
   {
     name: 'Home',
-    route: {
-      name: 'home'
-    },
+    path: '/',
     exactActive: true
   },
   {
@@ -23,11 +21,11 @@ const menus: Ref<Array<Menu>> = ref([
     children: [
       {
         name: 'Buttons',
-        route: '/components/buttons'
+        path: '/components/buttons'
       },
       {
         name: 'Form',
-        route: '/components/form'
+        path: '/components/form'
       }
     ],
     expanded: false
@@ -37,24 +35,35 @@ const menus: Ref<Array<Menu>> = ref([
     children: [
       {
         name: 'Item 1',
-        route: '/item-1'
+        path: '/item-1'
       },
       {
         name: 'Item 2',
-        route: '/item-2'
+        path: '/item-2'
       },
       {
         name: 'Item 3',
-        route: '/item-3'
+        path: '/item-3'
       }
     ],
     expanded: false
   },
   {
     name: 'Menu',
-    route: '/menu'
+    path: '/menu'
   }
 ])
+
+const route = useRoute()
+menus.value.forEach((menu, i) => {
+  if (menu.children) {
+    menu.children.forEach((childMenu) => {
+      if (childMenu.path === route.path) {
+        menus.value[i].expanded = true
+      }
+    })
+  }
+})
 </script>
 
 <template>
@@ -62,12 +71,12 @@ const menus: Ref<Array<Menu>> = ref([
     <div>
       <div class="h-8 w-[160px] bg-gray-500 mx-auto mt-6" />
     </div>
-    <nav class="mt-6 flex flex-col">
+    <nav class="flex flex-col mt-6">
       <template v-for="(menu, index) in menus" :key="index">
         <component
-          :is="menu.route ? RouterLink : 'button'"
-          :to="menu.route"
-          class="px-6 py-4 flex justify-between hover:bg-gray-100"
+          :is="menu.path ? RouterLink : 'button'"
+          :to="menu.path"
+          class="flex justify-between px-6 py-4 hover:bg-gray-100"
           v-bind="{
             ...(menu.exactActive && { 'exact-active-class': 'bg-gray-100' }),
             ...(!menu.exactActive && { 'active-class': 'bg-gray-100' })
@@ -75,7 +84,7 @@ const menus: Ref<Array<Menu>> = ref([
           v-on="menu.children ? { click: () => (menu.expanded = !menu.expanded) } : {}"
         >
           <div class="flex">
-            <div class="h-6 w-6 bg-gray-300 mr-3" />
+            <div class="w-6 h-6 mr-3 bg-gray-300" />
             {{ menu.name }}
           </div>
           <span
@@ -89,12 +98,16 @@ const menus: Ref<Array<Menu>> = ref([
           <Transition name="slide-down">
             <div
               v-if="menu.children?.length && menu.expanded"
-              class="mx-6 border-r border-b border-l flex flex-col"
+              class="flex flex-col mx-6 border-b border-l border-r"
             >
               <RouterLink
                 v-for="(childMenu, index2) in menu.children"
                 :key="index2"
-                :to="childMenu.route || '/'"
+                :to="childMenu.path || '/'"
+                v-bind="{
+                  ...(menu.exactActive && { 'exact-active-class': 'bg-gray-100' }),
+                  ...(!menu.exactActive && { 'active-class': 'bg-gray-100' })
+                }"
                 class="px-6 py-4 hover:bg-gray-100"
               >
                 {{ childMenu.name }}

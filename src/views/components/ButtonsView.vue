@@ -17,7 +17,7 @@ import CardBordered from '@/components/cards/CardBordered.vue'
       },
       {
         name: 'Buttons',
-        route: '/components/buttons'
+        path: '/components/buttons'
       }
     ]"
   >

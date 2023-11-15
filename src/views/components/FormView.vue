@@ -17,8 +17,8 @@ import InputRadio from '@/components/form/InputRadio.vue'
         name: 'Components'
       },
       {
-        name: 'Buttons',
-        route: '/components/buttons'
+        name: 'Form',
+        path: '/components/form'
       }
     ]"
   >

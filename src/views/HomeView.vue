@@ -8,7 +8,7 @@ import DashboardLayout from '@/layouts/DashboardLayout.vue'
     :breadcrumb="[
       {
         name: 'Home',
-        route: '/'
+        path: '/'
       }
     ]"
   >
