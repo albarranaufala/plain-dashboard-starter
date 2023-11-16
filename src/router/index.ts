@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('../views/components/FormView.vue')
     },
     {
+      path: '/components/modal',
+      name: 'components.modal',
+      component: () => import('../views/components/ModalView.vue')
+    },
+    {
       path: '/components/table',
       name: 'components.table',
       component: () => import('../views/components/TableView.vue')

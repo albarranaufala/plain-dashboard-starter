@@ -32,6 +32,10 @@ const menus: Ref<Array<Menu>> = ref([
         path: '/components/form'
       },
       {
+        name: 'Modal',
+        path: '/components/modal'
+      },
+      {
         name: 'Table',
         path: '/components/table'
       }

@@ -18,8 +18,8 @@ import TableBodyRow from '@/components/table/TableBodyRow.vue'
         name: 'Components'
       },
       {
-        name: 'Buttons',
-        path: '/components/buttons'
+        name: 'Table',
+        path: '/components/table'
       }
     ]"
   >
