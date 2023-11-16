@@ -13,8 +13,8 @@ import DropdownWrapper from '@/components/dropdown/DropdownWrapper.vue'
         name: 'Components'
       },
       {
-        name: 'Buttons',
-        path: '/components/buttons'
+        name: 'Dropdown',
+        path: '/components/dropdown'
       }
     ]"
   >

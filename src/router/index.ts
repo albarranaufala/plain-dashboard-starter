@@ -23,6 +23,11 @@ const router = createRouter({
       path: '/components/form',
       name: 'components.form',
       component: () => import('../views/components/FormView.vue')
+    },
+    {
+      path: '/components/table',
+      name: 'components.table',
+      component: () => import('../views/components/TableView.vue')
     }
   ]
 })

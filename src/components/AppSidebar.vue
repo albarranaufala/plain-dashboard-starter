@@ -30,13 +30,27 @@ const menus: Ref<Array<Menu>> = ref([
       {
         name: 'Form',
         path: '/components/form'
+      },
+      {
+        name: 'Table',
+        path: '/components/table'
       }
     ],
     expanded: false
   },
   {
-    name: 'Menu',
-    path: '/menu'
+    name: 'Example Pages',
+    children: [
+      {
+        name: 'Login',
+        path: '/login'
+      },
+      {
+        name: 'Register',
+        path: '/register'
+      }
+    ],
+    expanded: false
   }
 ])
 
