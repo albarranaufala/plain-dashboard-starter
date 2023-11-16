@@ -24,26 +24,12 @@ const menus: Ref<Array<Menu>> = ref([
         path: '/components/buttons'
       },
       {
+        name: 'Dropdown',
+        path: '/components/dropdown'
+      },
+      {
         name: 'Form',
         path: '/components/form'
-      }
-    ],
-    expanded: false
-  },
-  {
-    name: 'Dropdown',
-    children: [
-      {
-        name: 'Item 1',
-        path: '/item-1'
-      },
-      {
-        name: 'Item 2',
-        path: '/item-2'
-      },
-      {
-        name: 'Item 3',
-        path: '/item-3'
       }
     ],
     expanded: false

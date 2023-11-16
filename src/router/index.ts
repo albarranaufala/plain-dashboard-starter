@@ -15,6 +15,11 @@ const router = createRouter({
       component: () => import('../views/components/ButtonsView.vue')
     },
     {
+      path: '/components/dropdown',
+      name: 'components.dropdown',
+      component: () => import('../views/components/DropdownView.vue')
+    },
+    {
       path: '/components/form',
       name: 'components.form',
       component: () => import('../views/components/FormView.vue')
