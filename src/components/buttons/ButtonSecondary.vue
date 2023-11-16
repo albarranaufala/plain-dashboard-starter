@@ -6,7 +6,7 @@ defineProps<{
 
 <template>
   <button
-    class="px-4 py-2 font-medium transition rounded"
+    class="px-4 py-2 font-medium transition"
     :class="{
       'bg-gray-200 hover:bg-gray-300': !variant,
       'border border-gray-200 hover:bg-gray-200': variant === 'outline'
