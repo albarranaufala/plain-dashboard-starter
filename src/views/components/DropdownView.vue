@@ -26,7 +26,7 @@ import DropdownWrapper from '@/components/dropdown/DropdownWrapper.vue'
             <ButtonPrimary @click="toggle"> Dropdown </ButtonPrimary>
           </template>
 
-          <div class="p-4 bg-white rounded shadow-xl">This is the dropdown content</div>
+          <div class="p-4 bg-white border">This is the dropdown content</div>
         </DropdownWrapper>
       </CardBordered>
       <CardBordered class="mt-6">
@@ -36,7 +36,7 @@ import DropdownWrapper from '@/components/dropdown/DropdownWrapper.vue'
             <ButtonPrimary @click="toggle"> Dropdown </ButtonPrimary>
           </template>
 
-          <div class="p-4 bg-white rounded shadow-xl">This is the dropdown content</div>
+          <div class="p-4 bg-white border">This is the dropdown content</div>
         </DropdownWrapper>
       </CardBordered>
       <CardBordered class="mt-6">
@@ -46,7 +46,7 @@ import DropdownWrapper from '@/components/dropdown/DropdownWrapper.vue'
             <ButtonPrimary @click="toggle"> Dropdown </ButtonPrimary>
           </template>
 
-          <div class="p-4 bg-white rounded shadow-xl">This is the dropdown content</div>
+          <div class="p-4 bg-white border">This is the dropdown content</div>
         </DropdownWrapper>
       </CardBordered>
     </DashboardContent>
