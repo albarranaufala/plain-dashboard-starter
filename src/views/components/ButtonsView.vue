@@ -38,6 +38,14 @@ import CardBordered from '@/components/cards/CardBordered.vue'
         <ButtonWarning variant="outline" class="mt-2 mr-2"> Warning </ButtonWarning>
         <ButtonDanger variant="outline" class="mt-2 mr-2"> Danger </ButtonDanger>
       </CardBordered>
+      <CardBordered class="mt-6">
+        <h1 class="mb-4 text-lg font-semibold">Loading Button</h1>
+        <ButtonPrimary loading class="mt-2 mr-2"> Primary </ButtonPrimary>
+        <ButtonSecondary loading class="mt-2 mr-2"> Secondary </ButtonSecondary>
+        <ButtonSuccess loading class="mt-2 mr-2"> Success </ButtonSuccess>
+        <ButtonWarning loading class="mt-2 mr-2"> Warning </ButtonWarning>
+        <ButtonDanger loading class="mt-2 mr-2"> Danger </ButtonDanger>
+      </CardBordered>
     </DashboardContent>
   </DashboardLayout>
 </template>

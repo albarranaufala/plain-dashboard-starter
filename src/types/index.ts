@@ -6,4 +6,5 @@ export interface BreadcrumbItem {
 export interface ButtonProps {
   variant?: 'outline'
   to?: string
+  loading?: boolean
 }

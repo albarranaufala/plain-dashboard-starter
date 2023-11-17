@@ -26,7 +26,7 @@ function login() {
           <InputText type="password" required class="w-full mt-2" />
         </div>
         <ButtonPrimary type="submit" class="w-full mt-6"> Login </ButtonPrimary>
-        <ButtonPrimary to="/register" variant="outline" class="w-full mt-2 text-center">
+        <ButtonPrimary to="/register" variant="outline" class="w-full mt-2">
           Register
         </ButtonPrimary>
       </form>

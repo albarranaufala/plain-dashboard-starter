@@ -34,9 +34,7 @@ function register() {
           <InputText type="password" required class="w-full mt-2" />
         </div>
         <ButtonPrimary type="submit" class="w-full mt-6"> Register </ButtonPrimary>
-        <ButtonPrimary to="/login" variant="outline" class="w-full mt-2 text-center">
-          Login
-        </ButtonPrimary>
+        <ButtonPrimary to="/login" variant="outline" class="w-full mt-2"> Login </ButtonPrimary>
       </form>
     </CardBordered>
   </div>
