@@ -24,6 +24,11 @@ const router = createRouter({
       component: () => import('../views/components/ButtonsView.vue')
     },
     {
+      path: '/components/charts',
+      name: 'components.charts',
+      component: () => import('../views/components/ChartsView.vue')
+    },
+    {
       path: '/components/dropdown',
       name: 'components.dropdown',
       component: () => import('../views/components/DropdownView.vue')

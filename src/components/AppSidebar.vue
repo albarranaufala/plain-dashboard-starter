@@ -24,6 +24,10 @@ const menus: Ref<Array<Menu>> = ref([
         path: '/components/buttons'
       },
       {
+        name: 'Charts',
+        path: '/components/charts'
+      },
+      {
         name: 'Dropdown',
         path: '/components/dropdown'
       },
